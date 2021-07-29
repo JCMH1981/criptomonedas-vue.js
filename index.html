@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-  <title>Primera aplicación en Vue</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
   <div id="app">
-    <h1>{{title}}</h1>
-    <p>{{1 + 1 + 1}}</p>
-    <p>{{true || false}}</p>
-    <p>{{true ? true : false}}</p>
-    <p>{{"string".toUpperCase()}}</p>
-    <p>{{JSON.stringify({name: "Nacho"})}}</p>
+    <img v-bind:src="img" v-bind:alt="name"></img>
+    <h1>{{name}}</h1>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

@@ -1,9 +1,10 @@
 const app = new Vue({
-  el: "#app",
-  
-  data() {
+  el: '#app',
+
+  data () {
     return {
-      title: "¡Hola, Vue!"
+      name: 'Bitcoin',
+      img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png'
     }
   }
 });
