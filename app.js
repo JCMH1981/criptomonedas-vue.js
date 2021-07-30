@@ -51,6 +51,9 @@ Vue.component('CoinDetail', {
       <input type="number" v-model="value">
       <span>{{ convertedValue }}</span>
 
+      <slot name="text"></slot>
+      <slot name="link"></slot>
+
       <ul v-show="showPrices">
         <li
           class="uppercase"
@@ -74,7 +77,7 @@ new Vue({
         name: 'Bitcoin',
         symbol: 'BTC',
         img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
-        changePercent: 0,
+        changePercent: -10,
         price: 8400,
         pricesWithDays: [
           { day: 'Lunes', value: 8400 },
