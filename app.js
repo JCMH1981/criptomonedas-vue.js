@@ -11,6 +11,7 @@ Vue.component('CoinDetail', {
   methods: {
     toggleShowPrices () {
       this.showPrices = !this.showPrices;
+      this.$emit('change-color', this.showPrices ? 'FF96C8' : '3D3D3D');
     }
   },
 
@@ -67,7 +68,7 @@ Vue.component('CoinDetail', {
 new Vue({
   el: '#app',
 
-  data () {
+  data() {
     return {
       btc: {
         name: 'Bitcoin',
@@ -90,12 +91,9 @@ new Vue({
     }
   },
 
-/*
-  methods: {
-    toggleShowPrices() {
-      this.showPrices = !this.showPrices;
-      this.color = this.color.split("").reverse().join("");
+methods: {
+    updateColor(color) {
+      this.color = color || this.color.split("").reverse().join("");
     }
   }
-*/
 })
