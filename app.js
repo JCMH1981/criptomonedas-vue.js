@@ -4,7 +4,8 @@ const app = new Vue({
   data () {
     return {
       name: 'Bitcoin',
-      img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png'
+      img: 'https://cryptologos.cc/logos/bitcoin-btc-logo.png',
+      changePercent: -10,
     }
   }
 });
