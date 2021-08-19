@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import api from '@/api'
 import PxAssetsTable from '@/components/PxAssetsTable'
 
 export default {
@@ -16,6 +17,10 @@ export default {
     return {
       assets: []
     }
+  },
+  
+  created() {
+    api.getAssets().then(assets => (this.assets = assets))
   }
 }
 </script>
