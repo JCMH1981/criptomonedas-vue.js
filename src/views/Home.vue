@@ -1,0 +1,21 @@
+<template>
+  <div>
+    <px-assets-table :assets="assets" />
+  </div>
+</template>
+
+<script>
+import PxAssetsTable from '@/components/PxAssetsTable'
+
+export default {
+  name: 'Home',
+
+  components: { PxAssetsTable },
+
+  data() {
+    return {
+      assets: []
+    }
+  }
+}
+</script>
